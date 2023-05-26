@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  StatusBar,
-} from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
 import { theme } from '../core/theme';
+//Components IMPORTRS
 import Header from '../components/Header';
-import { Paragraph } from 'react-native-paper';
 import Button from '../components/Button';
 import Background from '../components/Background';
 import Logo from '../components/Logo';
 import TextInput from '../components/TextInput';
-import { emailValidator } from '../core/helpers/emailValidator';
 import BackButton from '../components/BackButton';
+
+import { emailValidator } from '../core/helpers/emailValidator';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -28,10 +23,10 @@ export default function ResetPasswordScreen({ navigation }) {
     if (emailError) {
       setEmail({ ...email, error: emailError });
     } else {
-      sendPasswordResetEmail(auth, email.value)
+      sendPasswordResetEmail(auth, email.value) // Calling a function form firebase
         .then((auth) => {
           //setLoading(false);
-          alert('abcd');
+          alert('Password reset email sent!');
         })
         .catch((e) => {
           alert(e);

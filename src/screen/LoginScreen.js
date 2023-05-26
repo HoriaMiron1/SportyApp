@@ -12,24 +12,25 @@ import {
   Keyboard,
 } from 'react-native';
 import { theme } from '../core/theme';
+
+//Components IMPORTS
 import Header from '../components/Header';
 import Button from '../components/Button';
 import Background from '../components/Background';
 import Logo from '../components/Logo';
 import TextInput from '../components/TextInput';
+import BackButton from '../components/BackButton';
+import GoogleLogin from '../components/GoogleLogin';
+
+//Core IMPORTS
 import { emailValidator } from '../core/helpers/emailValidator';
 import { passwordValidator } from '../core/helpers/passwordValidator';
-import BackButton from '../components/BackButton';
-import {
-  getAuth,
-  signInAnonymously,
-  onAuthStateChanged,
-  signOut,
-  signInWithEmailAndPassword,
-} from 'firebase/auth';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { auth } from '../core/config';
-import GoogleLogin from '../components/GoogleLogin';
+
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+//Context IMPORTS
 import { actionTypes } from '../context/reducer';
 import { useStateValue } from '../context/StateProvider';
 

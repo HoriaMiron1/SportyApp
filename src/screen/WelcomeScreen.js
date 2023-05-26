@@ -44,8 +44,10 @@ function LogoutScreen({ navigation }) {
   );
 }
 
+//custom contenent component
 function CustomDrawerContent({ logoutUser, ...props }) {
   return (
+    //wrapper contenent  - se asigura ca totul este scrollable si putem face modificari de design
     <DrawerContentScrollView {...props} style={{ flex: 1 }}>
       <View style={{ padding: 20 }}>
         <Text style={{ fontSize: 20, fontWeight: 'bold' }}>S P O R T Y</Text>

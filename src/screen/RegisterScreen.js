@@ -11,20 +11,23 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from 'react-native';
+//Components IMPORTS
 import Header from '../components/Header';
-import { theme } from '../core/theme';
 import Button from '../components/Button';
 import Background from '../components/Background';
 import Logo from '../components/Logo';
 import TextInput from '../components/TextInput';
+import BackButton from '../components/BackButton';
+import GoogleLogin from '../components/GoogleLogin';
+import { theme } from '../core/theme';
+//Core - helpers IMPORTS
 import { emailValidator } from '../core/helpers/emailValidator';
 import { passwordValidator } from '../core/helpers/passwordValidator';
-import BackButton from '../components/BackButton';
 import { nameValidator } from '../core/helpers/nameValidator';
+
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from '../core/config';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import GoogleLogin from '../components/GoogleLogin';
 
 export default function RegisterScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' });

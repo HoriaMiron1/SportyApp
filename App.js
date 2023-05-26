@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { theme } from './src/core/theme';
 import { NavigationContainer } from '@react-navigation/native';
 //import { createDrawerNavigator } from '@react-navigation/drawer'; // Import createDrawerNavigator EROARE IMI DA LA BABEL.CONFIG.JS
+//SCreen IMPORTS
 import {
   StartScreen,
   LoginScreen,
