@@ -18,7 +18,6 @@ export default function StartScreen({ navigation }) {
         imageStyle={styles.backgroundImage}
       >
         {/*This is for Android (StatusBar)*/}
-        <StatusBar backgroundColor='black' />
         <View style={styles.container}>
           <Logo />
           <Header> S p o r t y</Header>

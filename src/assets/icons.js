@@ -21,3 +21,5 @@ export const GoogleLogo = () => (
     />
   </Svg>
 );
+
+//SVG - Scalable Vector Graphics - Recat component that renders SVG (Google Logo)

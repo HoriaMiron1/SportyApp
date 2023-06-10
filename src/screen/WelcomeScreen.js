@@ -30,7 +30,6 @@ function LogoutScreen({ navigation }) {
   };
   return (
     <Background>
-      <StatusBar style='dark' />
       <Button
         style={styles.logout}
         onPress={() => {
@@ -55,7 +54,7 @@ function CustomDrawerContent({ logoutUser, ...props }) {
       <View style={{ flex: 1 }}>
         <DrawerItemList {...props} />
       </View>
-      <View style={{ paddingTop: 400 }}>
+      <View style={{ paddingTop: 500 }}>
         <DrawerItem
           label='Logout'
           icon={({ focused, color, size }) => (

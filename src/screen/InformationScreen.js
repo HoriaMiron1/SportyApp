@@ -4,7 +4,10 @@ import React from 'react';
 export default function InformationScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Screen2</Text>
+      <Text>
+        This is where the confirmation button will appear and the booking
+        details will be send on email
+      </Text>
     </View>
   );
 }

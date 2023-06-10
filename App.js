@@ -10,6 +10,8 @@ import {
   RegisterScreen,
   ResetPasswordScreen,
   WelcomeScreen,
+  InformationScreen,
+  BookingScreen,
   AuthLoadingScreen,
 } from './src/screen';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -37,6 +39,11 @@ export default function App() {
               <Stack.Screen name='LoginScreen' component={LoginScreen} />
               <Stack.Screen name='RegisterScreen' component={RegisterScreen} />
               <Stack.Screen name='WelcomeScreen' component={WelcomeScreen} />
+              <Stack.Screen
+                name='InformationScreen'
+                component={InformationScreen}
+              />
+              <Stack.Screen name='BookingScreen' component={BookingScreen} />
               <Stack.Screen
                 name='ResetPasswordScreen'
                 component={ResetPasswordScreen}

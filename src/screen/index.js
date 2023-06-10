@@ -6,4 +6,5 @@ export { default as WelcomeScreen } from './WelcomeScreen';
 export { default as ProfileScreen } from './ProfileScreen';
 export { default as InformationScreen } from './InformationScreen';
 export { default as HomeScreen } from './HomeScreen';
+export { default as BookingScreen } from './BookingScreen';
 export { default as AuthLoadingScreen } from './AuthLoadingScreen';
