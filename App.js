@@ -43,7 +43,17 @@ export default function App() {
                 name='InformationScreen'
                 component={InformationScreen}
               />
-              <Stack.Screen name='BookingScreen' component={BookingScreen} />
+
+              <Stack.Screen
+                name='BookingScreen'
+                component={BookingScreen}
+                options={{
+                  headerShown: true,
+                  headerTitle: 'Pick a day and time',
+                  headerTintColor: '#fff',
+                  headerStyle: { backgroundColor: '#42488df5' },
+                }}
+              />
               <Stack.Screen
                 name='ResetPasswordScreen'
                 component={ResetPasswordScreen}

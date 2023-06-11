@@ -66,7 +66,7 @@ export default function HomeScreen() {
   );
 
   return (
-    <View style={{ flex: 1, padding: 20, backgroundColor: '' }}>
+    <View style={{ flex: 1, padding: 20, backgroundColor: '#a6a9c1f5' }}>
       <FlatList
         data={images}
         renderItem={renderImageItem}
