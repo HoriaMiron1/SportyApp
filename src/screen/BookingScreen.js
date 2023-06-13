@@ -11,7 +11,7 @@ import {
   Pressable,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import { LinearGradient } from 'expo-linear-gradient';
 const daysOfWeek = [
   'Monday',
   'Tuesday',
@@ -41,31 +41,6 @@ export default function BookingScreen() {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedDay, setSelectedDay] = useState(null);
 
-  // Function to render each item in the FlatList
-  const renderItem = ({ item }) => {
-    if (selectedDay === null) {
-      // If no day is selected, render the days of the week
-      return (
-        <TouchableOpacity
-          style={styles.intervalContainer}
-          onPress={() => setSelectedDay(item)}
-        >
-          <Text style={{ fontSize: 18 }}>{item}</Text>
-        </TouchableOpacity>
-      );
-    } else {
-      // If a day is selected, render the time intervals
-      return (
-        <TouchableOpacity
-          style={styles.intervalContainer}
-          onPress={() => setModalVisible(true)}
-        >
-          <Text style={{ fontSize: 18 }}>{item.interval}</Text>
-        </TouchableOpacity>
-      );
-    }
-  };
-
   useLayoutEffect(() => {
     navigation.setOptions({
       title: 'Booking',
@@ -78,9 +53,42 @@ export default function BookingScreen() {
       },
     });
   }, [navigation]);
+  // Function to render each item in the FlatList
+  const renderItem = ({ item }) => {
+    if (selectedDay === null) {
+      // If no day is selected, render the days of the week with no background
+      return (
+        <TouchableOpacity
+          style={styles.dayContainer}
+          onPress={() => setSelectedDay(item)}
+        >
+          <LinearGradient
+            // Adjust the colors as needed
+            colors={['#4c669f', '#3b5998', '#192f6a']}
+            style={styles.gradientContainer}
+          >
+            <Text style={{ fontSize: 18 }}>{item}</Text>
+          </LinearGradient>
+        </TouchableOpacity>
+      );
+    } else {
+      // If a day is selected, render the time intervals with a normal background
+      return (
+        <TouchableOpacity
+          style={styles.intervalContainer}
+          onPress={() => setModalVisible(true)}
+        >
+          <Text style={{ fontSize: 18 }}>{item.interval}</Text>
+        </TouchableOpacity>
+      );
+    }
+  };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#a6a9c1f5' }}>
+      {selectedDay && (
+        <Text style={styles.selectedDayText}> {selectedDay}</Text> //Shows me dynamically the day I selected
+      )}
       <FlatList
         data={selectedDay ? timeIntervals : daysOfWeek}
         keyExtractor={(item) =>
@@ -125,6 +133,31 @@ export default function BookingScreen() {
 }
 
 const styles = StyleSheet.create({
+  dayContainer: {
+    marginBottom: 0,
+    marginTop: 15,
+    padding: 30,
+    alignItems: 'center',
+    borderRadius: 10,
+    width: '90%',
+    alignSelf: 'center',
+  },
+  gradientContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+    width: '90%',
+    marginBottom: -60,
+    marginTop: 0,
+    padding: 30,
+  },
+  selectedDayText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    margin: 15,
+    textAlign: 'center',
+  },
   intervalContainer: {
     marginBottom: 0,
     marginTop: 15,
