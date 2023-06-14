@@ -11,7 +11,8 @@ import {
   ResetPasswordScreen,
   WelcomeScreen,
   InformationScreen,
-  BookingScreen,
+  BookDayScreen,
+  BookTimeScreen,
   AuthLoadingScreen,
 } from './src/screen';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -45,11 +46,21 @@ export default function App() {
               />
 
               <Stack.Screen
-                name='BookingScreen'
-                component={BookingScreen}
+                name='BookDayScreen'
+                component={BookDayScreen}
                 options={{
                   headerShown: true,
-                  headerTitle: 'Pick a day and time',
+                  headerTitle: 'Choose your lucky day ',
+                  headerTintColor: '#fff',
+                  headerStyle: { backgroundColor: '#42488df5' },
+                }}
+              />
+              <Stack.Screen
+                name='BookTimeScreen'
+                component={BookTimeScreen}
+                options={{
+                  headerShown: true,
+                  headerTitle: 'Choose a time when to play',
                   headerTintColor: '#fff',
                   headerStyle: { backgroundColor: '#42488df5' },
                 }}
