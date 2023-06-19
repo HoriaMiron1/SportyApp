@@ -18,6 +18,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StateProvider } from './src/context/StateProvider';
 import reducer, { initialState } from './src/context/reducer';
+import { StatusBar } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 //const Drawer = createDrawerNavigator(); // Create a Drawer navigator instance

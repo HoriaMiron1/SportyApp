@@ -59,7 +59,7 @@ export default function BookTimeScreen({ route }) {
   const handleConfirmReservation = () => {
     // try {
     //try to send the call the function using axios
-    let message = `Dear Customer,\n\nYour reservation at ${field} is confirmed for the following time slot: ${timeInterval}.\n\nPlease arrive at least 15 minutes prior to your reservation for a smooth check-in.\n\nIf you have any questions, feel free to contact us.\n\nBest Regards,\nSporty Team`;
+    let message = `Dear Customer,\n\nYour reservation at ${field} is confirmed for ${selectedDay} during the following time slot: ${timeInterval}.\n\nPlease arrive at least 15 minutes prior to your reservation for a smooth check-in.\n\nIf you have any questions, feel free to contact us.\n\nBest Regards,\nSporty Team`;
 
     axios
       .get(

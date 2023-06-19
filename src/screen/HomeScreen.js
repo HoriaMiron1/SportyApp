@@ -15,7 +15,12 @@ import { useStateValue } from '../context/StateProvider';
 
 // Imgaes IMPORTS
 import footballimage3 from '../assets/footballimage3.jpg';
-
+import footballimage4 from '../assets/footballimage4.jpg';
+import footballimage5 from '../assets/footballimage5.jpg';
+import footballimage6 from '../assets/footballimage6.jpg';
+import footballimage7 from '../assets/footballimage7.jpg';
+import footballimage8 from '../assets/footballimage8.jpg';
+import footballimage9 from '../assets/footballimage9.jpg';
 //Define Image data
 const images = [
   {
@@ -27,37 +32,37 @@ const images = [
   {
     id: '2',
     title: 'Teren Fotbal Sintetic Gușterița',
-    source: footballimage3,
+    source: footballimage4,
     target: 'BookDayScreen',
   },
   {
     id: '3',
     title: 'Sintetic Valea Aurie',
-    source: footballimage3,
+    source: footballimage5,
     target: 'BookDayScreen',
   },
   {
     id: '4',
     title: 'Teren fotbal Sura Mica',
-    source: footballimage3,
+    source: footballimage6,
     target: 'BookDayScreen',
   },
   {
     id: '5',
     title: 'Luceafarul',
-    source: footballimage3,
+    source: footballimage7,
     target: 'BookDayScreen',
   },
   {
     id: '6',
     title: 'Pamira football',
-    source: footballimage3,
+    source: footballimage8,
     target: 'BookDayScreen',
   },
   {
     id: '7',
     title: 'Teren sintetic Strand',
-    source: footballimage3,
+    source: footballimage9,
     target: 'BookDayScreen',
   },
   // Add more images here

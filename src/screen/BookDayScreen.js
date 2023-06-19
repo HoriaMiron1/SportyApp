@@ -5,6 +5,7 @@ import {
   FlatList,
   TouchableOpacity,
   StyleSheet,
+  View,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -70,6 +71,9 @@ export default function BookDayScreen() {
       style={styles.container}
     >
       <SafeAreaView style={{ flex: 1 }}>
+        <View style={styles.headerContainer}>
+          <Text style={styles.headerText}>Week 12.06-18.06</Text>
+        </View>
         <FlatList
           data={dayOfWeek}
           keyExtractor={(item) => item}
@@ -81,6 +85,19 @@ export default function BookDayScreen() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 10,
+  },
+  headerContainer: {
+    alignItems: 'center',
+    marginBottom: -25,
+  },
+  headerText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'white',
+  },
   dayContainer: {
     marginBottom: 0,
     marginTop: 15,
@@ -99,9 +116,5 @@ const styles = StyleSheet.create({
     marginBottom: -60,
     marginTop: 0,
     padding: 30,
-  },
-  container: {
-    flex: 1,
-    padding: 10,
   },
 });
